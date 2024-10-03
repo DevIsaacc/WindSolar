@@ -45,7 +45,8 @@ button {
     background-color:#28a745;
     color:#fff;border:none;
     border-radius:4px;
-    cursor:pointer
+    cursor:pointer;
+    gap: 20px;
 }
 
 button:hover {
@@ -53,7 +54,7 @@ button:hover {
 }
 h2 {
     text-align:center;
-    color:#333
+    color:#333;
 }
 
 #historico {

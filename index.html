@@ -8,27 +8,36 @@
 </head>
 <body>
     <div class="container">
-        <div class="icone">
-            <i>
-                <img src="./solar-turbine.png" alt="">
-            </i>
-            <h1>WindSolar</h1>
-        </div>
-        <div class="input-group">
-            <label for="volts">Tensão (Volts):</label>
-            <input type="number" id="volts" placeholder="Insira os Volts" required>
-        </div>
-        <div class="input-group">
-            <label for="tempo">Tempo (Horas):</label>
-            <input type="number" id="tempo" placeholder="Insira o Tempo" required>
-        </div>
-        <div class="input-group">
-            <label for="preco">Custo do kWh:</label>
-            <input type="number" id="tarifa" placeholder="Insira o Preço" required>
-        </div>
+        <div class="fomulario">
+            <div class="icone">
+                <i>
+                    <img src="./solar-turbine.png" alt="">
+                </i>
+                <h1>WindSolar</h1>
+            </div>
+            <div class="input-group">
+                <label for="volts">Tensão (Volts):</label>
+                <input type="number" id="volts" placeholder="Insira os Volts" required>
+            </div>
+            <div class="input-group">
+                <label for="tempo">Tempo (Horas):</label>
+                <input type="number" id="tempo" placeholder="Insira o Tempo" required>
+            </div>
+            <div class="input-group">
+                <label for="preco">Custo do kWh:</label>
+                <input type="number" id="tarifa" placeholder="Insira o Preço" required>
+            </div>
 
-        <button id="calcular">Calcular</button>
-        <h2 id="resultado"></h2>
+            <div>
+                <button id="calcular">Calcular</button>
+                <button id="toggleHistorico">Mostrar Histórico</button>
+            </div>
+            
+            <div class="acao-historico">
+                <h2 id="resultado"></h2>
+                <ul id="historico" style="display: none;"></ul>
+            </div>
+        </div>
     </div>
         <footer>
             <div class="footer">

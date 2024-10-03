@@ -54,7 +54,13 @@ button:hover {
 h2 {
     text-align:center;
     color:#333
+}
 
+#historico {
+    font-size: 15px;
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
 }
 
 footer {

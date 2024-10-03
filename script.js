@@ -1,4 +1,6 @@
 document.getElementById('calcular').addEventListener('click', calcularCusto);
+document.getElementById('toggleHistorico').addEventListener('click', mostrarOcultarHistorico);
+window.onload = carregarHistorico;
 
 function calcularCusto() {
     const volts = parseFloat(document.getElementById('volts').value);
@@ -21,6 +23,45 @@ function calcularCusto() {
     // Cálculo do custo
     const custo = energia * tarifa; // Custo em R$
 
-    document.getElementById('resultado').innerText = `Custo Total: R$ ${custo.toFixed(2)}`;
+    const resultadoText = `Custo Total: R$ ${custo.toFixed(2)}`;
+    document.getElementById('resultado').innerText = resultadoText;
+
+    // Salvar no histórico
+    salvarHistorico(volts, tempoHoras, tarifa, custo);
 }
 
+function salvarHistorico(volts, tempo, tarifa, custo) {
+    const historico = JSON.parse(localStorage.getItem('historico')) || [];
+    const novoRegistro = { volts, tempo, tarifa, custo };
+    historico.push(novoRegistro);
+    localStorage.setItem('historico', JSON.stringify(historico));
+    atualizarHistorico();
+}
+
+function atualizarHistorico() {
+    const historico = JSON.parse(localStorage.getItem('historico')) || [];
+    const historicoList = document.getElementById('historico');
+    historicoList.innerHTML = '';
+    historico.forEach((registro) => {
+        const item = document.createElement('li');
+        item.innerText = `Volts: ${registro.volts}, Tempo: ${registro.tempo} horas, Tarifa: R$ ${registro.tarifa}, Custo: R$ ${registro.custo.toFixed(2)}`;
+        historicoList.appendChild(item);
+    });
+}
+
+function carregarHistorico() {
+    atualizarHistorico();
+}
+
+function mostrarOcultarHistorico() {
+    const historicoList = document.getElementById('historico');
+    const toggleButton = document.getElementById('toggleHistorico');
+    
+    if (historicoList.style.display === "none") {
+        historicoList.style.display = "block";
+        toggleButton.innerText = "Ocultar Histórico";
+    } else {
+        historicoList.style.display = "none";
+        toggleButton.innerText = "Mostrar Histórico";
+    }
+}

@@ -6,7 +6,8 @@ body {
     font-family:Arial,sans-serif;
     background-color:#f4f4f4;
     margin:0;
-    padding:155px;
+    padding:75px;
+    overflow: hidden;
 } 
 
 .container {
@@ -92,7 +93,8 @@ footer {
     position:absolute;
     bottom:0;
     left:0;
-    width:100%;      
+    width:100%;   
+    position:fixed;   
 }
 
 .icone,h1 {
@@ -114,6 +116,7 @@ footer {
     body {
         padding: 20px;
         margin-top: 55px;
+        overflow: auto;
     }
 
     .container {
@@ -132,7 +135,7 @@ footer {
 
     footer, p {
         font-size: 13px;
-        padding: 0;
+        position: static;
     }
 
     .icone, i {

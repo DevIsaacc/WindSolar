@@ -48,7 +48,6 @@ button {
     border:none;
     border-radius:4px;
     cursor:pointer;
-    gap: 20px;
 }
 
 button:hover {

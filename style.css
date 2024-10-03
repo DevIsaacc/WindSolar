@@ -6,8 +6,8 @@ body {
     font-family:Arial,sans-serif;
     background-color:#f4f4f4;
     margin:0;
-    padding:75px;
-    overflow: hidden;
+    padding:150px;
+    overflow-y:auto;
 } 
 
 .container {
@@ -64,6 +64,7 @@ h2 {
     margin-top: 20px;
     list-style-type:none;
     padding:0;
+    ;
 }
 
 .historico-list {
@@ -85,6 +86,11 @@ h2 {
     background-color: #e0e0e0; /* Destaque ao passar o mouse */
 }
 
+#clearHistorico {
+    background: #28a745;
+    border: none;
+    cursor: pointer;
+}
 
 footer {
     color:#333;
@@ -94,7 +100,7 @@ footer {
     bottom:0;
     left:0;
     width:100%;   
-    position:fixed;   
+    position: static; 
 }
 
 .icone,h1 {

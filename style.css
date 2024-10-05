@@ -41,9 +41,9 @@ input {
 }
 
 button {
-    margin:3px;
+    margin:3px 0;
     width:100%;
-    padding:8px;
+    padding: 7px;
     background-color:#28a745;
     color:#fff;
     border:none;
@@ -64,7 +64,6 @@ h2 {
     margin-top: 20px;
     list-style-type:none;
     padding:0;
-    ;
 }
 
 .historico-list {
@@ -86,10 +85,17 @@ h2 {
     background-color: #e0e0e0; /* Destaque ao passar o mouse */
 }
 
+.aline {
+    display: flex;
+}
+
 #clearHistorico {
+    width: 35px;
+    height: 30px;
     background: #28a745;
     border: none;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 footer {

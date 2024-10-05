@@ -92,19 +92,20 @@ h2 {
 #clearHistorico {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;
     background: #28a745;
     border: none;
     cursor: pointer;
     margin-left: 7px;
     width: 35px;
     height: 30px;
+    padding:0;
 }
 
 #clearHistorico img {
     width: 20px;
     height: 20px;
     filter: brightness(0) invert(1);
+    margin-top: 5px;
 }
 
 #clearHistorico:hover {

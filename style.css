@@ -164,6 +164,10 @@ footer {
         height: 43px;
     }
 
+    #clearHistorico img {
+        margin-bottom:6px;
+    }
+
     footer, p {
         font-size: 13px;
         position: static;

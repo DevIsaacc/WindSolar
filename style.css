@@ -54,6 +54,7 @@ button {
 button:hover {
     background-color:#218838;
 }
+
 h2 {
     text-align:center;
     color:#333;
@@ -78,7 +79,6 @@ h2 {
     border-radius: 5px; /* Cantos arredondados */
     padding: 10px;
     margin-bottom: 5px; /* Espaço entre os itens */
-    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
 }
 
 .historico-list li:hover {
@@ -90,12 +90,25 @@ h2 {
 }
 
 #clearHistorico {
-    width: 35px;
-    height: 30px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
     background: #28a745;
     border: none;
     cursor: pointer;
     margin-left: 7px;
+    width: 35px;
+    height: 30px;
+}
+
+#clearHistorico img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+#clearHistorico:hover {
+    background-color:#218838;
 }
 
 footer {
